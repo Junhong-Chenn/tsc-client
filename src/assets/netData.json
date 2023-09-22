@@ -20,8 +20,8 @@
       "id": "2",
       "name": "MlleBaptistine",
       "symbolSize": 40,
-      "x": -212.76357,
-      "y": 280,
+      "x": -150,
+      "y": 320,
       "category": 1
     },
     {
@@ -36,7 +36,7 @@
       "id": "4",
       "name": "CountessDeLo",
       "symbolSize": 30,
-      "x": -379.30386,
+      "x": -300,
       "y": 429.06424,
       "category": 2
     },
@@ -44,7 +44,7 @@
       "id": "5",
       "name": "Geborand",
       "symbolSize": 30,
-      "x": -417.26337,
+      "x": -450,
       "y": 406.03506,
       "category": 2
     },
