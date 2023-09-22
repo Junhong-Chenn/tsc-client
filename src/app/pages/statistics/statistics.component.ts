@@ -50,23 +50,136 @@ export class StatisticsComponent implements OnInit, OnDestroy {
 
   getOption1() { // 柱状图
     const option = {
-      legend: {},
-      tooltip: {},
-      dataset: {
-        source: [
-          ['product', '2021', '2022', '2023'],
-          ['Matcha Latte', 43.3, 58.8, 67.7],
-          ['Milk Tea', 55.1, 70.4, 87.1],
-          ['Cheese Cocoa', 60.4, 76.2, 88.5],
-          ['Walnut Brownie', 72.4, 83.9, 94.1]
-        ]
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          // Use axis to trigger tooltip
+          type: 'shadow' // 'shadow' as default; can also be 'line' or 'shadow'
+        }
       },
-      xAxis: { type: 'category' },
-      yAxis: {},
-      // Declare several bar series, each will be mapped
-      // to a column of dataset.source by default.
+      legend: {},
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+      },
+      xAxis: {
+        type: 'value'
+      },
+      yAxis: {
+        type: 'category',
+        data: ['Sep', 'Aug', 'Jul', 'Jun', 'May', 'Apr', 'Mar']
+      },
       series: [
-        { type: 'bar' }, { type: 'bar' }, { type: 'bar' }
+        {
+          name: 'Physical Health',
+          type: 'bar',
+          stack: 'total',
+          label: {
+            show: true
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          data: [320, 302, 301, 334, 390, 330, 320]
+        },
+        {
+          name: 'Mental Health',
+          type: 'bar',
+          stack: 'total',
+          label: {
+            show: true
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          data: [120, 132, 101, 134, 90, 230, 210]
+        },
+        {
+          name: 'Substance Use',
+          type: 'bar',
+          stack: 'total',
+          label: {
+            show: true
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          data: [220, 182, 191, 234, 290, 330, 310]
+        },
+        {
+          name: 'Family Reunification',
+          type: 'bar',
+          stack: 'total',
+          label: {
+            show: true
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          data: [150, 212, 201, 154, 190, 330, 410]
+        },
+        {
+          name: 'Legal',
+          type: 'bar',
+          stack: 'total',
+          label: {
+            show: true
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          data: [820, 832, 901, 934, 1290, 1330, 1320]
+        },
+        {
+          name: 'Financial',
+          type: 'bar',
+          stack: 'total',
+          label: {
+            show: true
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          data: [150, 212, 155, 154, 181, 21, 233]
+        },
+        {
+          name: 'Educational/Vocational',
+          type: 'bar',
+          stack: 'total',
+          label: {
+            show: true
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          data: [88, 183, 77, 154, 311, 77, 378]
+        },
+        {
+          name: 'Social Security',
+          type: 'bar',
+          stack: 'total',
+          label: {
+            show: true
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          data: [67, 109, 68, 154, 176, 43, 141]
+        },
+        {
+          name: 'Social Support',
+          type: 'bar',
+          stack: 'total',
+          label: {
+            show: true
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          data: [67, 81, 21, 154, 99, 50, 201]
+        },
       ]
     };
 
@@ -79,15 +192,15 @@ export class StatisticsComponent implements OnInit, OnDestroy {
         trigger: 'item',
       },
       legend: {
-        top: '1%',
-        left: 'center',
+        top: '0%',
+        left: 'left',
       },
       series: [
         {
           color: ['#5ab1ef', '#b6a2de', '#67e0e3', '#2ec7c9'],
-          name: '访问来源',
+          name: 'Closure Reason',
           type: 'pie',
-          radius: ['40%', '70%'],
+          radius: ['40%', '65%'],
           avoidLabelOverlap: false,
           itemStyle: {
             borderRadius: 10,
@@ -109,10 +222,10 @@ export class StatisticsComponent implements OnInit, OnDestroy {
             show: false,
           },
           data: [
-            {value: 1048, name: '搜索引擎'},
-            {value: 735, name: '直接访问'},
-            {value: 580, name: '邮件营销'},
-            {value: 484, name: '联盟广告'},
+            {value: 20, name: 'Permanent Housing'},
+            {value: 5, name: 'Incarcerated'},
+            {value: 5, name: 'Passed Away'},
+            {value: 6, name: 'Rule Violation'},
           ],
           animationType: 'scale',
           animationEasing: 'exponentialInOut',
@@ -133,16 +246,17 @@ export class StatisticsComponent implements OnInit, OnDestroy {
 
       series: [
         {
-          name: '访问来源',
+          name: 'Race/ Ethnicity',
           type: 'pie',
           radius: '80%',
           center: ['50%', '50%'],
           color: ['#5ab1ef', '#b6a2de', '#67e0e3', '#2ec7c9'],
           data: [
-            { value: 500, name: '电子产品' },
-            { value: 310, name: '服装' },
-            { value: 274, name: '化妆品' },
-            { value: 400, name: '家居' },
+            { value: 24, name: 'Black /African American' },
+            { value: 20, name: 'American lndian/Native Alaskan' },
+            { value: 27, name: 'Hispanic' },
+            { value: 20, name: 'While / Caucasian' },
+            { value: 5, name: 'Other' },
           ].sort(function (a, b) {
             return a.value - b.value;
           }),

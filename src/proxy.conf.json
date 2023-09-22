@@ -1,7 +1,6 @@
 {
   "/api": {
     "target": "http://www.18191.cn",
-    "logLevel": "debug",
     "secure": false,
     "changeOrigin": true,
     "pathRewrite": {
