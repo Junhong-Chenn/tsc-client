@@ -53,13 +53,13 @@
               <td nzEllipsis>{{data.moveInDate}}</td>
               <td nzEllipsis [nzTooltipTitle]="data.conditionSummary" nz-tooltip="true" [nzTooltipPlacement]="['topLeft', 'leftTop']">{{data.conditionSummary}}</td>
               <td nzRight>
-                <a (click)="edit(data)">Edit</a>
+                <a (click)="edit(data)" style="margin-right: 10px">Edit</a>
               </td>
             </tr>
             </tbody>
         </nz-table>
     </div>
-    <app-caseDetail *ngIf="showDetail" [serviceData]="serviceData" [caseDetail]="caseDetail" (closeDetail)="closeDetail()">
+    <app-caseDetail *ngIf="showDetail" [serviceData]="serviceData" [caseDetail]="caseDetail" (closeDetail)="closeDetail()" (saveDetail)="saveDetail($event)">
     </app-caseDetail>
 </div>
 

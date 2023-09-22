@@ -132,7 +132,7 @@
     </tbody>
   </nz-table>
     </nz-collapse-panel>
-    <nz-collapse-panel nzHeader="Journal" [nzActive]="false" *ngIf="caseDetail && journalData.activity">
+    <nz-collapse-panel nzHeader="Journal" [nzActive]="false" *ngIf="caseDetail && journalData?.activity">
       <div nz-row [nzGutter]="24">
       <nz-comment nz-col [nzSpan]="8">
         <nz-comment-content>

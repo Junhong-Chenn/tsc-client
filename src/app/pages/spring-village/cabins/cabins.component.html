@@ -19,9 +19,9 @@
         <i nz-icon nzType="search"></i>
       </nz-filter-trigger>
     </th>
-    <th nzColumnKey="number" [nzFilters]="filterGender" [nzFilterFn]="true">Number</th>
-    <th nzColumnKey="facility" [nzFilters]="filterGender" [nzFilterFn]="true">Facility</th>
-    <th nzColumnKey="available" [nzFilters]="filterGender" [nzFilterFn]="true">Available</th>
+    <th nzColumnKey="number" [nzSortFn]="true" [nzFilterFn]="true">Number</th>
+    <th nzColumnKey="facility" [nzSortFn]="true" [nzFilterFn]="true">Facility</th>
+    <th nzColumnKey="available" [nzSortFn]="true" [nzFilterFn]="true">Available</th>
     <th nzColumnKey="tenant" [nzSortFn]="true">Tenant</th>
   </tr>
   </thead>

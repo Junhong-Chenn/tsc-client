@@ -15,7 +15,8 @@ export class CaseDetailComponent implements OnInit {
   submitting = false;
   @Input() serviceData: any;
   @Input() caseDetail: any;
-  @Output() closeDetail = new EventEmitter()
+  @Output() closeDetail = new EventEmitter();
+  @Output() saveDetail = new EventEmitter();
   constructor(
     private fb: FormBuilder,
     private caseManagementService: CaseManagementService
@@ -62,7 +63,9 @@ export class CaseDetailComponent implements OnInit {
   }
 
   save() {
-    console.log('------',this.caseDetailForm)
+    console.log('------',this.caseDetailForm);
+    this.saveDetail.emit(this.caseDetailForm.value);
+    this.close();
   }
 
   reset() {
@@ -86,7 +89,7 @@ export class CaseDetailComponent implements OnInit {
       this.journalData = res
     })
   }
-  
+
   getCurrentTime() {
     var date = new Date()
         var Y = date.getFullYear() + '-';

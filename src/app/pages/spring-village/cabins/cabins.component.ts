@@ -44,11 +44,11 @@ export class CabinsComponent implements OnInit {
 
   search(): void {
     this.visible = false;
-    const filterNameKey = this.cachedQueryParams?.filter?.find(item => item.key === 'name');
+    const filterNameKey = this.cachedQueryParams?.filter?.find(item => item.key === 'location');
     if (filterNameKey) {
       filterNameKey.value = [this.searchValue];
     } else {
-      this.cachedQueryParams?.filter?.push({ key: 'name', value: [this.searchValue] });
+      this.cachedQueryParams?.filter?.push({ key: 'location', value: [this.searchValue] });
     }
     this.springVillageService.onQueryParamsChange(this.cachedQueryParams as NzTableQueryParams, this);
   }

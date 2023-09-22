@@ -53,6 +53,11 @@ export class CaseManagementComponent implements OnInit {
     this.showDetail = false;
   }
 
+  saveDetail(event: any) {
+    console.log('event',event);
+    this.listOfBeneficiary.push(event);
+  }
+
   getBeneficiaryData() {
     this.caseManagementService.getBeneficiaryData().subscribe((res :any) => {
       if (this.radioValue == 'Actived') {

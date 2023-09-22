@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { API_BASE_URL } from "../settings/project-setting";
-import {EMPTY, Observable, of} from "rxjs";
+import { EMPTY, Observable, of } from "rxjs";
 import { TableData, SpringVillageType, SpringVillageTypes } from '../pages/spring-village/spring-village.types';
 import { catchError } from "rxjs/operators";
 import { MockData } from "../pages/spring-village/mock-data";
@@ -101,15 +101,15 @@ export class SpringVillageService {
     reqObj.page = pageIndex;
     reqObj.paginationSize = pageSize;
     reqObj.orderFiled = sortField;
-    reqObj.orderType = sortOrder;
+    reqObj.orderType = sortOrder === 'ascend' ? 'asc' : 'desc';
     reqObj.caseClosure = null;
     reqObj.developGoal = null;
     reqObj.gender = null;
     reqObj.name = null;
     reqObj.navigator = null;
 
-    filters.forEach(filter => {
-      filter.value.forEach(value => {
+    (filters || []).forEach(filter => {
+      (filter.value || []).forEach(value => {
         // params = params.append(filter.key, value);
         reqObj[filter.key] = value;
       });
@@ -131,9 +131,9 @@ export class SpringVillageService {
         .pipe(catchError(() => EMPTY));
     }
     if (fieldType === SpringVillageTypes.Cabins) {
-      const reqObj: any = {};
+      // const reqObj: any = {};
       reqObj.number = null;
-      reqObj.location = null;
+      // reqObj.location = null;
       reqObj.facility = null;
       reqObj.availability = null;
       return this.httpClient
