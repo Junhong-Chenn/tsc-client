@@ -1,0 +1,35 @@
+POST /api/participant/searchBeneficiary
+searchBeneficiary()
+request body:
+"BeneficiarySearchCondition"
+
+return: List<Beneficiary>
+reference beneficiaryData.json
+
+
+POST /api/participant/searchStaff
+searchStaff()
+request body:
+"StaffSearchCondition"
+
+
+POST /api/cabin/searchCabin
+searchCabin()
+request body: "cabinSearchCondition"
+return: reference cabinData.json
+
+POST /api/service/addService
+addService()
+request body: reference beneficiary.seriviceItem
+
+POST /api/service/updateService
+updateService()
+request body: reference beneficiary.seriviceItem
+
+POST /api/service/addBeneficiary
+addBeneficiary()
+request body: reference beneficiary
+
+POST /api/service/updateBeneficiary
+updateBeneficiary()
+request body: reference beneficiary

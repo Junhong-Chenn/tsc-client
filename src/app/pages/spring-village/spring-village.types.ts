@@ -3,7 +3,7 @@ import {NavigatorsComponent} from "./navigators/navigators.component";
 
 export enum SpringVillageTypes {
   Beneficiary = 'Beneficiary',
-  Navigators = 'Navigators',
+  Staff = 'Staff',
   Cabins = 'Cabins',
   Services = 'Services',
   Test = 'Test',

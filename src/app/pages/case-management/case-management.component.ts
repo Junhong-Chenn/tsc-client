@@ -8,15 +8,15 @@ import { CaseManagementService } from 'src/app/services/case-management.service'
   encapsulation: ViewEncapsulation.None
 })
 export class CaseManagementComponent implements OnInit {
-  radioValue = '1';
+  radioValue = 'Actived';
   listOfBeneficiary: any[] = [];
   caseType = [
     {
-      key: '1',
-      value: 'Open Case'
+      key: 'Actived',
+      value: 'Actived Case'
     },
     {
-      key: '2',
+      key: 'Closed',
       value: 'Closed Case'
     }
   ];
@@ -33,10 +33,12 @@ export class CaseManagementComponent implements OnInit {
   }
 
   onCaseTypeChange(event: any) {
-
+    this.radioValue = event;
+    this.getBeneficiaryData();
   }
 
   openDetail() {
+    this.caseDetail = null;
     this.showDetail = true;
   }
 
@@ -53,13 +55,16 @@ export class CaseManagementComponent implements OnInit {
 
   getBeneficiaryData() {
     this.caseManagementService.getBeneficiaryData().subscribe((res :any) => {
-      this.listOfBeneficiary = res.beneficiaries
+      if (this.radioValue == 'Actived') {
+        this.listOfBeneficiary = res.beneficiaries.filter((el: any) => { return !el.caseClosure})
+      } else {
+        this.listOfBeneficiary = res.beneficiaries.filter((el: any) => { return el.caseClosure})
+      }
     })
   }
 
   edit(item: any) {
     this.caseDetail = item;
     this.showDetail = true;
-    console.log('item',item)
   }
 }

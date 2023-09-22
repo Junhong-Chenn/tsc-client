@@ -12,24 +12,26 @@
       "developGoal": ["Mental Health", "Substance Use"],
       "conditionSummary": "Rebecca has opiate use history and addiction, she needs rehab.",
       "assignedNavigator": "Julie, Warren",
-      "servicePlanList": [
+      "serviceItemList": [
         {
+          "beneficiary": "Rebecca, Lyons",
+          "navigator": "Julie, Warren",
           "serviceName":"MentalHealth",
           "serviceProvider": "PROMISE",
           "organizationAddress": "Sussex County 308 N.Railroad Avenue Georgetown, DE 19947, DE19720",
           "serviceCategory": "MentalHealth",
-          "serviceDate": "2022-09-22",
+          "serviceStartDate": "2022-09-22 15:33:09",
           "serviceStatus": "Completed",
+          "lastModifiedDate": "2022-09-22 15:33:09",
           "serviceComments": "Rebecca has completed mental cure session.",
           "serviceFeedback": "Rebecca feels better.",
           "caseWorker": "Joe, Collins"
         }
       ],
-      "caseClosure": {
-        "leaveDate": "",
-        "leaveReason": "",
-        "closureComments": ""
-      }
+      "caseClosure": false,
+      "leaveDate": "",
+      "leaveReason": "",
+      "closureComments": ""
     },
     {
       "name": "Lynn, Watter",
@@ -43,35 +45,40 @@
       "developGoal": ["Mental Health", "Substance Use"],
       "conditionSummary": "Lynn has opiate use history and addiction, she needs rehab.",
       "assignedNavigator": "Julie, Warren",
-      "servicePlanList": [
+      "serviceItemList": [
         {
+          "beneficiary": "Lynn, Watter",
+          "navigator": "Julie, Warren",
           "serviceName":"MentalHealth",
           "serviceProvider": "PROMISE",
           "organizationAddress": "Sussex County 308 N.Railroad Avenue Georgetown, DE 19947, DE19720",
           "serviceCategory": "MentalHealth",
-          "serviceDate": "2022-09-21",
+          "serviceStartDate": "2022-09-22 15:33:09",
           "serviceStatus": "Completed",
+          "lastModifiedDate": "2022-10-22 15:33:09",
           "serviceComments": "Lynn has completed mental cure session.",
           "serviceFeedback": "Lynn needs another session.",
           "caseWorker": "Joe, Collins"
         },
         {
+          "beneficiary": "Lynn, Watter",
+          "navigator": "Julie, Warren",
           "serviceName":"MentalHealth",
           "serviceProvider": "PROMISE",
           "organizationAddress": "Sussex County 308 N.Railroad Avenue Georgetown, DE 19947, DE19720",
           "serviceCategory": "MentalHealth",
-          "serviceDate": "2022-10-21",
+          "serviceStartDate": "2022-09-22 15:33:09",
           "serviceStatus": "Completed",
+          "lastModifiedDate": "2022-10-22 15:33:09",
           "serviceComments": "Lynn has completed mental cure session.",
           "serviceFeedback": "Lynn is healthy now.",
           "caseWorker": "Joe, Collins"
         }
       ],
-      "caseClosure": {
-        "leaveDate": "2023-09-21",
-        "leaveReason": "Permanent Housing",
-        "closureComments": "Lynn has found permanent housing."
-      }
+      "caseClosure": true,
+      "leaveDate": "2023-09-21",
+      "leaveReason": "Permanent Housing",
+      "closureComments": "Lynn has found permanent housing."
     }
   ]
 }

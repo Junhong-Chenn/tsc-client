@@ -1,6 +1,9 @@
 <div style="height:100%; padding: 24px">
     <nz-carousel nzAutoPlay *ngIf="!orgDetail">
-      <div nz-carousel-content *ngFor="let item of orgArray" (click)="getOrgDetail(item)">
+      <div nz-carousel-content *ngFor="let item of orgArray;let i = index" [ngClass]="'image_'+i"
+      (click)="getOrgDetail(item)"
+      >
+      <!-- [style.background-image]="item.image" -->
         <h1>{{ item.name }}</h1>
       </div>
     </nz-carousel>

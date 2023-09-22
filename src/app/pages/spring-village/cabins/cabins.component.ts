@@ -20,7 +20,12 @@ export class CabinsComponent implements OnInit {
     { text: 'male', value: 'male' },
     { text: 'female', value: 'female' }
   ];
-  cachedQueryParams: NzTableQueryParams | null = null;
+  cachedQueryParams: NzTableQueryParams = {
+    pageIndex: this.pageIndex,
+    pageSize: this.pageSize,
+    sort: [],
+    filter: [],
+  };
 
   searchValue = '';
   visible = false;

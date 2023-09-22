@@ -10,7 +10,7 @@ import { TestComponent } from "./test/test.component";
 
 export const SpringVillageComponents = {
   [SpringVillageTypes.Beneficiary]: BeneficiaryComponent,
-  [SpringVillageTypes.Navigators]: NavigatorsComponent,
+  [SpringVillageTypes.Staff]: NavigatorsComponent,
   [SpringVillageTypes.Cabins]: CabinsComponent,
   [SpringVillageTypes.Services]: ServiceComponent,
   [SpringVillageTypes.Test]: TestComponent,
@@ -54,34 +54,34 @@ export class SpringVillageComponent implements OnInit {
     });
   }
 
-  loadDataFromServer(
-    pageIndex: number,
-    pageSize: number,
-    sortField: string | null,
-    sortOrder: string | null,
-    filter: Array<{ key: string; value: string[] }>
-  ): void {
-    this.loading = true;
-    this.springVillageService.getUsers(
-      pageIndex, pageSize, sortField, sortOrder, filter, this.fieldType
-    ).subscribe(data => {
-      console.log('data', data);
-      this.loading = false;
-      this.total = 200; // mock the total data here
-      this.listData = data.results;
-      // this.listData = data;
-    });
-  }
-
-  onQueryParamsChange(params: NzTableQueryParams): void {
-    console.log('params', params);
-    this.cachedQueryParams = params;
-    const { pageSize, pageIndex, sort, filter } = params;
-    const currentSort = sort.find(item => item.value !== null);
-    const sortField = (currentSort && currentSort.key) || null;
-    const sortOrder = (currentSort && currentSort.value) || null;
-    this.loadDataFromServer(pageIndex, pageSize, sortField, sortOrder, filter);
-  }
+  // loadDataFromServer(
+  //   pageIndex: number,
+  //   pageSize: number,
+  //   sortField: string | null,
+  //   sortOrder: string | null,
+  //   filter: Array<{ key: string; value: string[] }>
+  // ): void {
+  //   this.loading = true;
+  //   this.springVillageService.getUsers(
+  //     pageIndex, pageSize, sortField, sortOrder, filter, this.fieldType
+  //   ).subscribe(data => {
+  //     console.log('data', data);
+  //     this.loading = false;
+  //     this.total = 200; // mock the total data here
+  //     this.listData = data.results;
+  //     // this.listData = data;
+  //   });
+  // }
+  //
+  // onQueryParamsChange(params: NzTableQueryParams): void {
+  //   console.log('params', params);
+  //   this.cachedQueryParams = params;
+  //   const { pageSize, pageIndex, sort, filter } = params;
+  //   const currentSort = sort.find(item => item.value !== null);
+  //   const sortField = (currentSort && currentSort.key) || null;
+  //   const sortOrder = (currentSort && currentSort.value) || null;
+  //   this.loadDataFromServer(pageIndex, pageSize, sortField, sortOrder, filter);
+  // }
 
   onSpringVillageTypeChange(event: SpringVillageType) {
     console.log('event', event);
@@ -90,21 +90,21 @@ export class SpringVillageComponent implements OnInit {
     this.loadComponent();
   }
 
-  reset(): void {
-    this.searchValue = '';
-    this.search();
-  }
+  // reset(): void {
+  //   this.searchValue = '';
+  //   this.search();
+  // }
 
-  search(): void {
-    this.visible = false;
-    const filterNameKey = this.cachedQueryParams?.filter?.find(item => item.key === 'name');
-    if (filterNameKey) {
-      filterNameKey.value = [this.searchValue];
-    } else {
-      this.cachedQueryParams?.filter?.push({ key: 'name', value: [this.searchValue] });
-    }
-    this.onQueryParamsChange(this.cachedQueryParams as NzTableQueryParams);
-  }
+  // search(): void {
+  //   this.visible = false;
+  //   const filterNameKey = this.cachedQueryParams?.filter?.find(item => item.key === 'name');
+  //   if (filterNameKey) {
+  //     filterNameKey.value = [this.searchValue];
+  //   } else {
+  //     this.cachedQueryParams?.filter?.push({ key: 'name', value: [this.searchValue] });
+  //   }
+  //   this.onQueryParamsChange(this.cachedQueryParams as NzTableQueryParams);
+  // }
 
   loadComponent() {
     this.unloadComponent();

@@ -15,10 +15,16 @@ import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzTagModule } from 'ng-zorro-antd/tag';
 import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
-
+import { NzCollapseModule } from 'ng-zorro-antd/collapse';
+import { NzTimelineModule } from 'ng-zorro-antd/timeline';
+import { NzCommentModule } from 'ng-zorro-antd/comment';
+import { NzSwitchModule } from 'ng-zorro-antd/switch';
 @NgModule({
   declarations: [
     CaseManagementComponent,
+    CaseDetailComponent
+  ],
+  exports: [
     CaseDetailComponent
   ],
   imports: [
@@ -34,7 +40,11 @@ import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
     NzDatePickerModule,
     NzSelectModule,
     NzTagModule,
-    NzToolTipModule
+    NzToolTipModule,
+    NzCollapseModule,
+    NzTimelineModule,
+    NzCommentModule,
+    NzSwitchModule
   ]
 })
 export class CaseManagementModule { }

@@ -19,6 +19,7 @@ import { NavigatorsComponent } from './navigators/navigators.component';
 import { CabinsComponent } from './cabins/cabins.component';
 import { ServiceComponent } from './service/service.component';
 import { TestComponent } from './test/test.component';
+import { CaseManagementModule } from "../case-management/case-management.module";
 
 
 
@@ -31,21 +32,22 @@ import { TestComponent } from './test/test.component';
     ServiceComponent,
     TestComponent
   ],
-  imports: [
-    CommonModule,
-    SpringVillageRoutingModule,
-    NzRadioModule,
-    FormsModule,
-    NzTableModule,
-    NzIconModule,
-    NzDropDownModule,
-    NzMenuModule,
-    NzButtonModule,
-    NzInputModule,
-    NzTagModule,
-    NzToolTipModule,
-    NzPopoverModule,
-  ],
+    imports: [
+        CommonModule,
+        SpringVillageRoutingModule,
+        NzRadioModule,
+        FormsModule,
+        NzTableModule,
+        NzIconModule,
+        NzDropDownModule,
+        NzMenuModule,
+        NzButtonModule,
+        NzInputModule,
+        NzTagModule,
+        NzToolTipModule,
+        NzPopoverModule,
+        CaseManagementModule,
+    ],
   exports: [
     SpringVillageComponent
   ]

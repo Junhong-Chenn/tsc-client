@@ -16,6 +16,12 @@ export class OrganizationGalleryComponent implements OnInit {
   ngOnInit(): void {
     this.organizationGalleryService.getOrgDate().subscribe((res: any) =>{
       this.orgArray = res.organizations
+      this.orgArray.forEach((el: any) => {
+          el.image = `url('../../../../src/assets/images/${el.name}.png')`
+          // el.image = `../../../../src/assets/images/${el.name}.png`
+        })
+      console.log('*****',res.organizations)
+      console.log('his.orgArray',this.orgArray)
     })
   }
 

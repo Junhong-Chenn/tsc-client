@@ -14,6 +14,7 @@ export const MockData = {
       "developGoal": ["Mental Health", "Substance Use"],
       "conditionSummary": "Rebecca has opiate use history and addiction, she needs rehab.",
       "assignedNavigator": "Julie, Warren",
+      "inTcs": true,
       "servicePlanList": [
         {
           "serviceName":"MentalHealth",
@@ -76,7 +77,7 @@ export const MockData = {
       }
     }
   ],
-  [SpringVillageTypes.Navigators]: [
+  [SpringVillageTypes.Staff]: [
     {"name": "Julie, Warren",
       "email": "julie@gmail.com",
       "role": "Navigator",

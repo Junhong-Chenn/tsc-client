@@ -16,4 +16,8 @@ export class CaseManagementService {
   getBeneficiaryData() {
     return this.httpClient.get('assets/beneficiaryData.json')
   }
+
+  getJournalData() {
+    return this.httpClient.get('assets/journalData.json')
+  }
 }

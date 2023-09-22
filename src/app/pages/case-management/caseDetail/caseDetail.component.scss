@@ -1,11 +1,17 @@
 .detail {
     height: 100%;
+    position: relative;
     .close {
         position: absolute;
-        right: 40px;
-        top: 95px;
+        right: -15px;
+        top: -30px;
     }
     .btns {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        margin: auto;
         text-align: center;
         button {
             margin-left: 5px;
@@ -13,3 +19,19 @@
         }
     }
 }
+::ng-deep .ant-collapse-content {
+    max-height: calc(100vh - 380px) !important;
+    overflow: auto;
+}
+::ng-deep .ant-collapse {
+    margin: 15px
+}
+
+::ng-deep .ant-form-item-label {
+    text-align: left;
+} 
+
+::ng-deep .ant-comment-inner {
+    padding: 0px;
+}
+

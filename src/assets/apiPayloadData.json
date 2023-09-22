@@ -1,0 +1,34 @@
+{
+  "BeneficiarySearchCondition": {
+    "page": 1,
+    "paginationSize": 25,
+    "orderFiled": "name",
+    "orderType": "asc",
+    "name": "rebecca",
+    "gender": "female",
+    "navigator": "jul",
+    "developGoal": ["Mental Health"],
+    "services": ["Mental Health"],
+    "caseClosure": true
+  },
+  "StaffSearchCondition": {
+    "page": 1,
+    "paginationSize": 25,
+    "orderFiled": "name",
+    "orderType": "asc",
+    "name": "rebecca",
+    "gender": "female",
+    "organization": "tsc",
+    "onboardDateFrom": "2021-09-08",
+    "onboardDateTo": "2022-09-12"
+  },
+  "cabinSearchCondition": {
+    "number": [1,2],
+    "location": "Delaware",
+    "facility": "regular",
+    "availability": true
+  },
+  "serviceSearchCondition": {
+    "serviceName": {}
+  }
+}

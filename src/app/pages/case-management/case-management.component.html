@@ -14,7 +14,7 @@
         >
           <thead>
             <tr>
-                <th nzLeft>Name</th>
+                <th nzLeft>Beneficiary</th>
                 <th>Gender</th>
                 <th>DateOfBirth</th>
                 <th nzEllipsis>ContactNumber</th>
@@ -22,7 +22,7 @@
                 <th>DevelopGoal</th>
                 <th>Service Plan</th>
                 <th>Navigator</th>
-                <th>CabinNumber</th>
+                <!-- <th>CabinNumber</th> -->
                 <th>MoveInDate</th>
                 <th nzEllipsis>ConditionSummary</th>
                 <th nzRight [nzWidth]="'75px'">Action</th>
@@ -49,7 +49,7 @@
                 </span>
               </td>
               <td nzEllipsis>{{data.assignedNavigator}}</td>
-              <td nzEllipsis>{{data.cabinNumber}}</td>
+              <!-- <td nzEllipsis>{{data.cabinNumber}}</td> -->
               <td nzEllipsis>{{data.moveInDate}}</td>
               <td nzEllipsis [nzTooltipTitle]="data.conditionSummary" nz-tooltip="true" [nzTooltipPlacement]="['topLeft', 'leftTop']">{{data.conditionSummary}}</td>
               <td nzRight>

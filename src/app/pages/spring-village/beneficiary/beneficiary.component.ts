@@ -27,13 +27,22 @@ export class BeneficiaryComponent implements OnInit {
     { text: 'male', value: 'male' },
     { text: 'female', value: 'female' }
   ];
-  cachedQueryParams: NzTableQueryParams | null = null;
+  cachedQueryParams: NzTableQueryParams = {
+    pageIndex: this.pageIndex,
+    pageSize: this.pageSize,
+    sort: [],
+    filter: [],
+  };
 
   searchValue = '';
   visible = false;
   @Input() contentTemplate!: TemplateRef<any>;
   ServiceTypeMapping = ServiceTypeMapping;
   ServiceTypes = ServiceTypes;
+
+  showDetail = false;
+  serviceData: any;
+  caseDetail = null;
 
   constructor(
     public springVillageService: SpringVillageService,
@@ -47,6 +56,12 @@ export class BeneficiaryComponent implements OnInit {
     this.search();
   }
 
+  goDetail(event: any) {
+    console.log('event', event);
+    this.showDetail = true;
+    this.caseDetail = event;
+  }
+
   search(): void {
     this.visible = false;
     const filterNameKey = this.cachedQueryParams?.filter?.find(item => item.key === 'name');
@@ -56,6 +71,10 @@ export class BeneficiaryComponent implements OnInit {
       this.cachedQueryParams?.filter?.push({ key: 'name', value: [this.searchValue] });
     }
     this.springVillageService.onQueryParamsChange(this.cachedQueryParams as NzTableQueryParams, this);
+  }
+
+  closeDetail() {
+    this.showDetail = false;
   }
 
 }

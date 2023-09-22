@@ -1,4 +1,5 @@
 <nz-table
+  *ngIf="!showDetail"
   #nzTable
   nzShowSizeChanger
   nzSize="small"
@@ -25,13 +26,15 @@
     <th nzColumnKey="contactNumber" [nzSortFn]="true">ContactNumber</th>
     <th nzColumnKey="developGoal" [nzSortFn]="true">DevelopGoal</th>
     <th nzColumnKey="assignedNavigator" [nzSortFn]="true">Navigator</th>
-    <th nzColumnKey="servicePlanList" [nzSortFn]="true">Service Plan</th>
+    <th nzColumnKey="servicePlanList" [nzSortFn]="true">Services</th>
+    <th nzColumnKey="inTcs" [nzSortFn]="true">In TCS</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let data of listData">
     <td [nzTooltipTitle]="data.conditionSummary" nz-tooltip="true" [nzTooltipPlacement]="['topLeft', 'leftTop']">
-      <a>{{ data.name }}</a>
+<!--      <a>{{ data.name }}</a>-->
+      <a nz-button nzType="link" (click)="goDetail(data)">{{ data.name }}</a>
     </td>
     <td>{{ data.gender }}</td>
     <td>{{ data.dateOfBirth }}</td>
@@ -51,6 +54,7 @@
         </nz-tag>
       </span>
     </td>
+    <td>{{ data.inTcs? 'Yes' : 'No' }}</td>
   </tr>
   </tbody>
 </nz-table>
@@ -71,3 +75,12 @@
   </div>
   <div>{{ data['serviceName'] }}</div>
 </ng-template>
+
+<div class="case-detail">
+  <app-caseDetail
+    *ngIf="showDetail"
+    [serviceData]="serviceData"
+    [caseDetail]="caseDetail"
+    (closeDetail)="closeDetail()">
+  </app-caseDetail>
+</div>
