@@ -1,10 +1,10 @@
 {
   "/api": {
-    "target": "http://www.18191.cn",
+    "target": "https://wi6g6c7rpk.us-east-1.awsapprunner.com/tsc/api",
     "secure": false,
     "changeOrigin": true,
     "pathRewrite": {
-      "^/api": ""
+      "^/api": "/api"
     }
   }
 }
