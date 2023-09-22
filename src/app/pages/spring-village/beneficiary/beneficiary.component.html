@@ -41,8 +41,8 @@
     <td>{{ data.email }}</td>
     <td>{{ data.contactNumber }}</td>
     <td>
-      <span *ngFor="let item of data.developGoal">
-        <nz-tag [nzColor]="'magenta'">{{ item }}</nz-tag>
+      <span *ngFor="let item of data.developGoal?.split(',')">
+        <nz-tag *ngIf="item" [nzColor]="'magenta'">{{ item }}</nz-tag>
       </span>
     </td>
     <td>{{ data.assignedNavigator }}</td>

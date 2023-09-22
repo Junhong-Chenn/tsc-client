@@ -1,6 +1,6 @@
 {
   "/api": {
-    "target": "https://wi6g6c7rpk.us-east-1.awsapprunner.com/tsc/api",
+    "target": "https://wi6g6c7rpk.us-east-1.awsapprunner.com/tsc",
     "secure": false,
     "changeOrigin": true,
     "pathRewrite": {

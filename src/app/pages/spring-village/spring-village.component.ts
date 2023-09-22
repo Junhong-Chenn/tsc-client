@@ -52,6 +52,10 @@ export class SpringVillageComponent implements OnInit {
     setTimeout(() => {
       this.onSpringVillageTypeChange(this.fieldType);
     });
+
+    this.springVillageService.getBeneficiaryFilterList().subscribe(data => {
+      console.log('data', data);
+    });
   }
 
   // loadDataFromServer(

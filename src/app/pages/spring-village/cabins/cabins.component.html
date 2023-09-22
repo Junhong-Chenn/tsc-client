@@ -19,6 +19,7 @@
         <i nz-icon nzType="search"></i>
       </nz-filter-trigger>
     </th>
+    <th nzColumnKey="number" [nzFilters]="filterGender" [nzFilterFn]="true">Number</th>
     <th nzColumnKey="facility" [nzFilters]="filterGender" [nzFilterFn]="true">Facility</th>
     <th nzColumnKey="available" [nzFilters]="filterGender" [nzFilterFn]="true">Available</th>
     <th nzColumnKey="tenant" [nzSortFn]="true">Tenant</th>
@@ -27,6 +28,7 @@
   <tbody>
   <tr *ngFor="let data of listData">
     <td><a>{{ data.location }}</a></td>
+    <td>{{ data.number }}</td>
     <td>{{ data.facility }}</td>
     <td>{{ data.available ? 'Yse' : 'No' }}</td>
     <td>{{ data.tenant }}</td>
