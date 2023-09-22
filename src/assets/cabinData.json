@@ -1,0 +1,144 @@
+{
+  "cabins": [
+    {
+      "number": 1,
+      "available": false,
+      "location": "Delaware",
+      "facility": "regular",
+      "tenant": ["Rebecca, Lyons"]
+    },
+    {
+      "number": 2,
+      "available": true,
+      "location": "Delaware",
+      "facility": "regular",
+      "tenant": []
+    },
+    {
+      "number": 3,
+      "available": false,
+      "location": "Delaware",
+      "facility": "regular",
+      "tenant": ["Bobby, Terry"]
+    },
+    {
+      "number": 4,
+      "available": false,
+      "location": "Delaware",
+      "facility": "regular",
+      "tenant": ["Joyce, Freck"]
+    },
+    {
+      "number": 5,
+      "available": false,
+      "location": "Delaware",
+      "facility": "regular",
+      "tenant": ["Kathleen, Baker"]
+    },
+    {
+      "number": 6,
+      "available": false,
+      "location": "Delaware",
+      "facility": "regular",
+      "tenant": ["Jacob, Morris"]
+    },
+    {
+      "number": 7,
+      "available": false,
+      "location": "Delaware",
+      "facility": "regular",
+      "tenant": ["Freddie, Carswel"]
+    },
+    {
+      "number": 8,
+      "available": false,
+      "location": "Delaware",
+      "facility": "regular",
+      "tenant": ["Jacqueline, Tolbert", "James, Fisher"]
+    },
+    {
+      "number": 9,
+      "available": true,
+      "location": "Delaware",
+      "facility": "regular",
+      "tenant": []
+    },
+    {
+      "number": 10,
+      "available": true,
+      "location": "Delaware",
+      "facility": "regular",
+      "tenant": []
+    },
+    {
+      "number": 11,
+      "available": false,
+      "location": "Delaware",
+      "facility": "regular",
+      "tenant": ["Joy, Warner"]
+    },
+    {
+      "number": 12,
+      "available": false,
+      "location": "Delaware",
+      "facility": "regular",
+      "tenant": ["Jeffrey, Botts"]
+    },
+    {
+      "number": 13,
+      "available": false,
+      "location": "Delaware",
+      "facility": "regular",
+      "tenant": ["Wendy, Armstrong"]
+    },
+    {
+      "number": 14,
+      "available": false,
+      "location": "Delaware",
+      "facility": "regular",
+      "tenant": ["Jessica, Wagner", "Anner, Perez"]
+    },
+    {
+      "number": 15,
+      "available": false,
+      "location": "Delaware",
+      "facility": "regular",
+      "tenant": ["Kevin, Roberts"]
+    },
+    {
+      "number": 16,
+      "available": false,
+      "location": "Delaware",
+      "facility": "regular",
+      "tenant": ["Eunice, Carter"]
+    },
+    {
+      "number": 7,
+      "available": false,
+      "location": "Delaware",
+      "facility": "regular",
+      "tenant": ["Kristen, Stevenson"]
+    },
+    {
+      "number": 18,
+      "available": false,
+      "location": "Delaware",
+      "facility": "regular",
+      "tenant": ["Wendy, Bowen", "Clyde, Parker"]
+    },
+    {
+      "number": 19,
+      "available": false,
+      "location": "Delaware",
+      "facility": "regular",
+      "tenant": ["Margaret, Carter"]
+    },
+    {
+      "number": 20,
+      "available": false,
+      "location": "Delaware",
+      "facility": "regular",
+      "tenant": ["Darrell, Stanley"]
+    }
+  ]
+}

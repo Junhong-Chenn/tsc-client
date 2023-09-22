@@ -1,0 +1,95 @@
+<nz-layout class="app-layout">
+  <nz-sider class="menu-sidebar"
+            nzCollapsible
+            nzWidth="256px"
+            nzBreakpoint="md"
+            [(nzCollapsed)]="isCollapsed"
+            [nzTrigger]="null">
+    <div class="sidebar-logo">
+      <a href="https://ng.ant.design/" target="_blank">
+        <img src="assets/logo.jpg" alt="logo">
+        <h1>TSC client</h1>
+      </a>
+    </div>
+    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+      <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/welcome">Welcome</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/statistics">Statistics</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Workplace</a>
+          </li>
+        </ul>
+      </li>
+      <li nz-submenu nzOpen nzTitle="Navigation" nzIcon="pic-center">
+        <ul>
+<!--          <li nz-menu-item nzMatchRouter>-->
+<!--            <a>Basic Form</a>-->
+<!--          </li>-->
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/spring-village">Spring Village</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/organization-gallery">Organization Gallery</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/case-management">Case Management</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header>
+      <div class="app-header">
+        <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+            <i class="trigger"
+               nz-icon
+               [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+            ></i>
+        </span>
+
+<!--        <nz-breadcrumb class="breadcrumb-container">-->
+<!--          <nz-breadcrumb-item class="breadcrumb-item">-->
+<!--            <a [routerLink]="['welcome']">Home</a>-->
+<!--          </nz-breadcrumb-item>-->
+<!--          <nz-breadcrumb-item>Breadcrumb</nz-breadcrumb-item>-->
+<!--        </nz-breadcrumb>-->
+
+        <nz-breadcrumb [nzSeparator]="'>'" class="breadcrumb-container">
+          <ng-container *ngFor="let breadcrumb of breadcrumbData; let last = last">
+            <nz-breadcrumb-item *ngIf="!last" class="breadcrumb-item">
+              <a [routerLink]="breadcrumb.url">{{ breadcrumb.label }}</a>
+            </nz-breadcrumb-item>
+            <nz-breadcrumb-item *ngIf="last" class="breadcrumb-item">
+              {{ breadcrumb.label }}
+            </nz-breadcrumb-item>
+          </ng-container>
+        </nz-breadcrumb>
+
+
+        <nz-avatar
+          [nzGap]="4"
+          [ngStyle]="{ 'background-color': color }"
+          [nzText]="user"
+          [nzSize]="30"
+          class="user-avatar"
+        ></nz-avatar>
+
+        <button nz-button nzType="default" nzSize="small" class="login-btn" [routerLink]="['login']">
+          Login
+        </button>
+
+      </div>
+    </nz-header>
+    <nz-content>
+      <div class="inner-content">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>

@@ -1,0 +1,73 @@
+<nz-table
+  #nzTable
+  nzShowSizeChanger
+  nzSize="small"
+  [nzData]="listData"
+  [nzFrontPagination]="false"
+  [nzLoading]="loading"
+  [nzTotal]="total"
+  [nzPageSize]="pageSize"
+  [nzPageIndex]="pageIndex"
+  [nzScroll]="{ y: 'calc(100vh - 300px)' }"
+  (nzQueryParams)="springVillageService.onQueryParamsChange($event, this)"
+>
+  <thead>
+  <tr>
+    <th nzCustomFilter nzColumnKey="name" [nzSortFn]="true">
+      Name
+      <nz-filter-trigger [(nzVisible)]="visible" [nzActive]="searchValue.length > 0" [nzDropdownMenu]="menu">
+        <i nz-icon nzType="search"></i>
+      </nz-filter-trigger>
+    </th>
+    <th nzColumnKey="gender" [nzFilters]="filterGender" [nzFilterFn]="true">Gender</th>
+    <th nzColumnKey="dateOfBirth" [nzSortFn]="true">Date Of Birth</th>
+    <th nzColumnKey="email" [nzSortFn]="true">Email</th>
+    <th nzColumnKey="contactNumber" [nzSortFn]="true">ContactNumber</th>
+    <th nzColumnKey="developGoal" [nzSortFn]="true">DevelopGoal</th>
+    <th nzColumnKey="assignedNavigator" [nzSortFn]="true">Navigator</th>
+    <th nzColumnKey="servicePlanList" [nzSortFn]="true">Service Plan</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let data of listData">
+    <td [nzTooltipTitle]="data.conditionSummary" nz-tooltip="true" [nzTooltipPlacement]="['topLeft', 'leftTop']">
+      <a>{{ data.name }}</a>
+    </td>
+    <td>{{ data.gender }}</td>
+    <td>{{ data.dateOfBirth }}</td>
+    <td>{{ data.email }}</td>
+    <td>{{ data.contactNumber }}</td>
+    <td>
+      <span *ngFor="let item of data.developGoal">
+        <nz-tag [nzColor]="'magenta'">{{ item }}</nz-tag>
+      </span>
+    </td>
+    <td>{{ data.assignedNavigator }}</td>
+    <td>
+      <span *ngFor="let item of data.servicePlanList">
+        <nz-tag [nzColor]="'green'" nz-tooltip="" [nzTooltipTitle]="contentTemplate"
+                [nzTooltipTitleContext]="{ $implicit: item }">
+          <span>{{ item?.["serviceName"] }}</span>
+        </nz-tag>
+      </span>
+    </td>
+  </tr>
+  </tbody>
+</nz-table>
+
+<nz-dropdown-menu #menu="nzDropdownMenu">
+  <div class="ant-table-filter-dropdown">
+    <div class="search-box">
+      <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchValue" />
+      <button nz-button nzSize="small" nzType="primary" (click)="search()" class="search-button">Search</button>
+      <button nz-button nzSize="small" (click)="reset()">Reset</button>
+    </div>
+  </div>
+</nz-dropdown-menu>
+
+<ng-template #contentTemplate let-data>
+  <div *ngFor="let item of ServiceTypes">
+    <div>{{ ServiceTypeMapping[item] }}: {{ data[item] }}</div>
+  </div>
+  <div>{{ data['serviceName'] }}</div>
+</ng-template>

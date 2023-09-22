@@ -1,0 +1,231 @@
+{
+  "organizations": [
+    {
+      "name": "First State Community Action Agency",
+      "description": "First State Community Action Agency will provide wrap-around comprehensive case management, re-entry services, and workforce development. FSCAA also leases the land in which the village is located.",
+      "link": "https://www.firststatecaa.org/",
+      "staff": [
+        {"name": "Nancy, Warren",
+          "email": "nancy@gmail.com",
+          "tel": "123-456-7890"
+        },
+        {"name": "Joe, Collins",
+          "email": "collins@gmail.com",
+          "tel": "223-456-7890"
+        }
+      ],
+      "contact": [
+        {
+          "office": "New Castle County\n19 Lambsoo Lane\nRosehill Community Center\nNew Castle, DE19720 ",
+          "phone": "302-498-0454",
+          "fax": "302-575-1409"
+        },
+        {
+          "office": "Sussex County\n308 N.Railroad Avenue\nGeorgetown, DE 19947, DE19720 ",
+          "phone": "302-856-7761",
+          "fax": "302-856-2599"
+        }
+      ]
+    },
+    {
+      "name": "La Red Health Center",
+      "description": "La Red Health Center will provide medical, dental,mental health counseling,substance use treatment, and transportation to and from appointments.",
+      "link": "http://www.laredhealthcenter.org/",
+      "Contact": [
+        {"office": "Sussex County\n308 N.Railroad Avenue\nGeorgetown, DE 19947, DE19720 ",
+          "phone": "302-856-7761"
+        }
+      ],
+      "staff": [
+        {"name": "Ryan, Fisher",
+          "email": "ryanfisher@gmail.com",
+          "tel": "123-456-7890"
+        },
+        {"name": "Amy, Chou",
+          "email": "amychou@gmail.com",
+          "tel": "223-456-7890"
+        }
+      ]
+    },
+    {
+      "name": "Marigold Health",
+      "description": "Marigold is virtual treatment program where people with mental health & substance use conditions support each other.\nMarigold Health will provide online anonymous peer support counseling and group chats for those with substance use histories.\n",
+      "link": "https://www.marigoldhealth.com/",
+      "Contact": [
+        {"office": "Sussex County\n308 N.Railroad Avenue\nGeorgetown, DE 19947, DE19720 ",
+          "phone": "302-856-7761"
+        }
+      ],
+      "staff": [
+        {"name": "Mike, Davis",
+          "email": "mikedavis@gmail.com",
+          "tel": "123-456-7890"
+        },
+        {"name": "Kate, Myers",
+          "email": "katemyers@gmail.com",
+          "tel": "223-456-7890"
+        }
+      ]
+    },
+    {
+      "name": "NET MARRV",
+      "description": "NET MARRV will provide treatment access and connections to services such as Medicaid, Food Stamps, GA, and state phones.",
+      "link": "https://www.marigoldhealth.com/",
+      "Contact": [
+        {"office": "Sussex County\n308 N.Railroad Avenue\nGeorgetown, DE 19947, DE19720 ",
+          "phone": "302-856-7761"
+        }
+      ],
+      "staff": [
+        {"name": "Luke, Dawn",
+          "email": "lukedawn@gmail.com",
+          "tel": "123-456-7890"
+        },
+        {"name": "Charlotte, Fan",
+          "email": "charlotte@gmail.com",
+          "tel": "223-456-7890"
+        }
+      ]
+    },
+    {
+      "name": "Brandywine Valley SPCA",
+      "description": "Brandywine Valley SPCA will provide veterinary care including spay/neuter,vaccinations,medical care,and well visits. BVSPCA will also provide food and litter for the animals living in the village.",
+      "link": "https://bvspca.org/",
+      "Contact": [
+        {"office": "Sussex County\n308 N.Railroad Avenue\nGeorgetown, DE 19947, DE19720 ",
+          "phone": "302-856-7761"
+        }
+      ],
+      "staff": [
+        {"name": "Vincent, Sheen",
+          "email": "vincent@gmail.com",
+          "tel": "123-456-7890"
+        },
+        {"name": "Shawn, Duan",
+          "email": "shawnduan@gmail.com",
+          "tel": "223-456-7890"
+        }
+      ]
+    },
+    {
+      "name": "Del-One Credit Union",
+      "description": "Del-One Credit Union will provide access to savings accounts for participants as well as credit counseling services, money management education, an ATM on site,and classes in financial literacy.",
+      "link": "https://www.del-one.org/",
+      "Contact": [
+        {"office": "Sussex County\n308 N.Railroad Avenue\nGeorgetown, DE 19947, DE19720 ",
+          "phone": "302-856-7761"
+        }
+      ],
+      "staff": [
+        {"name": "James, Wong",
+          "email": "jameswong@gmail.com",
+          "tel": "123-456-7890"
+        },
+        {"name": "Max, Song",
+          "email": "maxsong@gmail.com",
+          "tel": "223-456-7890"
+        }
+      ]
+    },
+    {
+      "name": "DSAMH and the PROMISE program",
+      "description": "DSAMH and the PROMISE program will engage those in the village needing mental health and substance use support.TSC will access the Bridge Clinic for referrals to treatment programs and outpatient services. Participants who meet the specifications for PROMISE will be supported by PROMISE and the ACT teams for their mental health and wellness needs. ACT teams will further explore permanent housing options for those assigned to their programs.",
+      "link": "https://www.dhss.delaware.gov/dhss/dsamh/promise.html",
+      "Contact": [
+        {"office": "Sussex County\n308 N.Railroad Avenue\nGeorgetown, DE 19947, DE19720 ",
+          "phone": "302-856-7761"
+        }
+      ],
+      "staff": [
+        {"name": "Gia, Chen",
+          "email": "giachen@gmail.com",
+          "tel": "123-456-7890"
+        },
+        {"name": "Junhong, Chen",
+          "email": "junhong@gmail.com",
+          "tel": "223-456-7890"
+        }
+      ]
+    },
+    {
+      "name": "Brandywine Counseling and Community Service",
+      "description": "Brandywine Counseling and Community Services provides Targeted Case Management,Medication Assisted Treatment, mental health counseling, psychiatric medication prescriptions, and substance use counseling.Their Prevention Mobile Van will provide HIV and Hep Ctesting,HepC treatment, and wellness education. Outreach teams will visit to engage participants in recovery conversations.",
+      "link": "https://www.brandywinecounseling.com/",
+      "Contact": [
+        {"office": "Sussex County\n308 N.Railroad Avenue\nGeorgetown, DE 19947, DE19720 ",
+          "phone": "302-856-7761"
+        }
+      ],
+      "staff": [
+        {"name": "Phoebe, Wei",
+          "email": "phoebewei@gmail.com",
+          "tel": "123-456-7890"
+        },
+        {"name": "Lucas, Chen",
+          "email": "lucaschen@gmail.com",
+          "tel": "223-456-7890"
+        }
+      ]
+    },
+    {
+      "name": "Georgetown Police Department",
+      "description": "Georgetown Police Department mental health clinicians will be used for crisis support and overdose follow up.",
+      "link": "https://pd.georgetown.org/",
+      "Contact": [
+        {"office": "Sussex County\n308 N.Railroad Avenue\nGeorgetown, DE 19947, DE19720 ",
+          "phone": "302-856-7761"
+        }
+      ],
+      "staff": [
+        {"name": "Aki, Zhang",
+          "email": "akizhang@gmail.com",
+          "tel": "123-456-7890"
+        },
+        {"name": "Lucene, Yang",
+          "email": "luceneyang@gmail.com",
+          "tel": "223-456-7890"
+        }
+      ]
+    },
+    {
+      "name": "Joyfully Connected Foundation",
+      "description": "Joyfully Connected Foundation will offer written support through weekly cards of encouragement, notes with responses between participants and organization volunteers, and holiday/birthday cards to combat loneliness.",
+      "link": "https://www.joyfullyconnectedfoundation.org/",
+      "Contact": [
+        {"office": "Sussex County\n308 N.Railroad Avenue\nGeorgetown, DE 19947, DE19720 ",
+          "phone": "302-856-7761"
+        }
+      ],
+      "staff": [
+        {"name": "Teenie, Huang",
+          "email": "teeniehuang@gmail.com",
+          "tel": "123-456-7890"
+        },
+        {"name": "Harry, Wu",
+          "email": "harrywu@gmail.com",
+          "tel": "223-456-7890"
+        }
+      ]
+    },
+    {
+      "name": "CAMP Rehoboth",
+      "description": "CAMP Rehoboth, in partnership with Springboard Collaborative and the Delaware Division of Public Health, provides HIV testing, prevention counseling and referral services at the Springboard Pallet Village in Georgetown.",
+      "link": "https://www.camprehoboth.com/",
+      "Contact": [
+        {"office": "Sussex County\n308 N.Railroad Avenue\nGeorgetown, DE 19947, DE19720 ",
+          "phone": "302-856-7761"
+        }
+      ],
+      "staff": [
+        {"name": "Tabris, Wong",
+          "email": "tabriswong@gmail.com",
+          "tel": "123-456-7890"
+        },
+        {"name": "Mark, Martens",
+          "email": "markmartens@gmail.com",
+          "tel": "223-456-7890"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+<div style="height:100%; padding: 24px">
+    <nz-carousel nzAutoPlay *ngIf="!orgDetail">
+      <div nz-carousel-content *ngFor="let item of orgArray" (click)="getOrgDetail(item)">
+        <h1>{{ item.name }}</h1>
+      </div>
+    </nz-carousel>
+    <app-orgDetail *ngIf="orgDetail" (toBack)="close($event)" [orgDetail]="orgDetail"></app-orgDetail>
+  </div>
+

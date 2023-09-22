@@ -1,0 +1,15 @@
+.detail {
+    height: 100%;
+    .close {
+        position: absolute;
+        right: 40px;
+        top: 95px;
+    }
+    .btns {
+        text-align: center;
+        button {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    }
+}

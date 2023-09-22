@@ -1,0 +1,119 @@
+{
+  "services": [
+    {
+      "serviceName": "New Medical",
+      "description": "Description of this service.",
+      "organizationName": "La Red Health Center",
+      "serviceAvailability": "provided",
+      "serviceCategory": "Physical Health",
+      "organizationAddress": "Sussex County 308 N.Railroad Avenue Georgetown, DE 19947, DE19720"
+    },
+    {
+      "serviceName": "Mental Health",
+      "description": "Description of this service.",
+      "organizationName": "PROMISE",
+      "serviceAvailability": "provided",
+      "serviceCategory": "Mental Health",
+      "organizationAddress": "Sussex County 308 N.Railroad Avenue Georgetown, DE 19947, DE19720"
+    },
+    {
+      "serviceName": "Substance Use Treatment",
+      "description": "Description of this service.",
+      "organizationName": "The DSAMH Bridge Clinic",
+      "serviceAvailability": "provided",
+      "serviceCategory": "Substance Use",
+      "organizationAddress": "Sussex County 308 N.Railroad Avenue Georgetown, DE 19947, DE19720"
+    },
+    {
+      "serviceName": "Banking Services",
+      "description": "Description of this service.",
+      "organizationName": "Del-One Credit Union",
+      "serviceAvailability": "provided",
+      "serviceCategory": "Financial",
+      "organizationAddress": "Sussex County 308 N.Railroad Avenue Georgetown, DE 19947, DE19720"
+    },
+    {
+      "serviceName": "Online Peer Support",
+      "description": "Description of this service.",
+      "organizationName": "Marigold",
+      "serviceAvailability": "provided",
+      "serviceCategory": "Social Support",
+      "organizationAddress": "Sussex County 308 N.Railroad Avenue Georgetown, DE 19947, DE19720"
+    },
+    {
+      "serviceName": "Veterinary Care",
+      "description": "Description of this service.",
+      "organizationName": "Brandywine Valley SPCA",
+      "serviceAvailability": "provided",
+      "serviceCategory": "Mental Health",
+      "organizationAddress": "Sussex County 308 N.Railroad Avenue Georgetown, DE 19947, DE19720"
+    },
+    {
+      "serviceName": "Pet Food",
+      "description": "Description of this service.",
+      "organizationName": "Bone and Yarn",
+      "serviceAvailability": "provided",
+      "serviceCategory": "Other",
+      "organizationAddress": "Sussex County 308 N.Railroad Avenue Georgetown, DE 19947, DE19720"
+    },
+    {
+      "serviceName": "Holistic Recovery Services",
+      "description": "Description of this service.",
+      "organizationName": "ACT Team",
+      "serviceAvailability": "provided",
+      "serviceCategory": "Physical Health",
+      "organizationAddress": "Sussex County 308 N.Railroad Avenue Georgetown, DE 19947, DE19720"
+    },
+    {
+      "serviceName": "Addiction Treatment",
+      "description": "Description of this service.",
+      "organizationName": "Brandywine Counseling and Community Services",
+      "serviceAvailability": "provided",
+      "serviceCategory": "Substance Use",
+      "organizationAddress": "Sussex County 308 N.Railroad Avenue Georgetown, DE 19947, DE19720"
+    },
+    {
+      "serviceName": "Case Management",
+      "description": "Description of this service.",
+      "organizationName": "FSCAA",
+      "serviceAvailability": "provided",
+      "serviceCategory": "Social Security",
+      "organizationAddress": "Sussex County 308 N.Railroad Avenue Georgetown, DE 19947, DE19720"
+    },
+    {
+      "serviceName": "Social Support",
+      "description": "Description of this service.",
+      "organizationName": "Joyfully Connected Foundation",
+      "serviceAvailability": "provided",
+      "serviceCategory": "Social Support",
+      "organizationAddress": "Sussex County 308 N.Railroad Avenue Georgetown, DE 19947, DE19720"
+    },
+    {
+      "serviceName": "NET Centers",
+      "description": "Description of this service.",
+      "organizationName": "NET MARRV",
+      "serviceAvailability": "provided",
+      "serviceCategory": "Other",
+      "organizationAddress": "Sussex County 308 N.Railroad Avenue Georgetown, DE 19947, DE19720"
+    }
+  ],
+  "serviceCategories": [
+    "Physical Health",
+    "Mental Health",
+    "Substance Use",
+    "Family Reunification",
+    "Legal",
+    "Financial",
+    "Educational/Vocational",
+    "Social Security",
+    "Social Support"
+  ],
+  "caseClosureReason": [
+    "Permanent Housing",
+    "Incarcerated",
+    "Significant Care Needs",
+    "Passed Away",
+    "Different Arrangement",
+    "Rule Violation"
+  ]
+}

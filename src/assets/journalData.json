@@ -1,0 +1,58 @@
+{
+  "beneficiary": "Rebecca, Lyons",
+  "navigator": "Julie, Warren",
+  "caseWorker": ["Joe, Collins"],
+  "activity": [
+    {
+      "time": "2021-09-20 15:33",
+      "operator": "Julie, Warren",
+      "note": "Opened case for Rebecca, Lyons."
+    },
+    {
+      "time": "2021-09-21 15:33",
+      "operator": "Julie, Warren",
+      "note": "Had status assessment with Rebecca."
+    },
+    {
+      "time": "2021-10-23 15:33",
+      "operator": "Julie, Warren",
+      "note": "Submitted service plan for Rebecca."
+    },
+    {
+      "time": "2021-11-21 15:33",
+      "operator": "Julie, Warren",
+      "note": "Have status assessment with Rebecca."
+    },
+    {
+      "time": "2021-11-21 15:33",
+      "operator": "Julie, Warren",
+      "note": "@Joe, Collins, would you pls help on Rebecca's case?"
+    },
+    {
+      "time": "2021-12-21 15:33",
+      "operator": "Joe, Collins",
+      "note": "Set up mental health service appointment for Rebecca."
+    },
+    {
+      "time": "2022-3-21 15:33",
+      "operator": "Joe, Collins",
+      "note": "Rebecca starts mental health cure session."
+    },
+    {
+      "time": "2022-09-21 15:33",
+      "operator": "Joe, Collins",
+      "note": "Rebecca completed mental health cure session."
+    },
+    {
+      "time": "2022-09-22 15:33",
+      "operator": "Julie, Warren",
+      "note": "Updated service plan status as completed for Rebecca. Comments:\"Rebecca has completed mental cure session.\" Feedback: \"Rebecca feels better.\""
+    },
+    {
+      "time": "2022-09-21 15:33",
+      "operator": "Joe, Collins",
+      "note": "Rebecca completed mental health cure session."
+    }
+  ]
+
+}

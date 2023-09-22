@@ -1,0 +1,25 @@
+<div class="orgDetail">
+  <a nz-button nzType="link" (click)="goBack()"> < Go Back</a>
+  <div>
+    <h1>{{orgDetail.name}}</h1>
+    <h3>Description</h3>
+    <div>{{orgDetail.description}}</div>
+    <h3>Link: <a id='link' target="_brank">{{orgDetail.link}}</a></h3>
+  </div>
+  <h2 *ngIf="orgDetail.staff">staff include</h2>
+  <div *ngFor="let office of orgDetail.staff" class="office">
+    <h3>{{office.name}}</h3>
+      <div>
+        <span><label>Mail: </label>{{office.email}}</span><br>
+        <span><label>Tel: </label>{{office.tel}}</span>
+      </div>
+  </div>
+  <h2 *ngIf="orgDetail.contact">contact include</h2>
+  <div *ngFor="let office of orgDetail.contact" class="office"> 
+      <div>
+        <span><label>Office: </label>{{office.office}}</span><br>
+        <span><label>Phone: </label>{{office.phone}}</span><br>
+        <span><label>Fax: </label>{{office.fax}}</span>
+      </div>
+  </div>
+</div>

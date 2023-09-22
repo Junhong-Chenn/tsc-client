@@ -1,0 +1,43 @@
+<nz-table
+  #nzTable
+  nzShowSizeChanger
+  nzSize="small"
+  [nzData]="listData"
+  [nzFrontPagination]="false"
+  [nzLoading]="loading"
+  [nzTotal]="total"
+  [nzPageSize]="pageSize"
+  [nzPageIndex]="pageIndex"
+  [nzScroll]="{ y: 'calc(100vh - 300px)' }"
+  (nzQueryParams)="springVillageService.onQueryParamsChange($event, this)"
+>
+  <thead>
+  <tr>
+    <th nzCustomFilter nzColumnKey="serviceName" [nzSortFn]="true">
+      Name
+      <nz-filter-trigger [(nzVisible)]="visible" [nzActive]="searchValue.length > 0" [nzDropdownMenu]="menu">
+        <i nz-icon nzType="search"></i>
+      </nz-filter-trigger>
+    </th>
+    <th nzColumnKey="gender" [nzFilters]="filterGender" [nzFilterFn]="true">Gender</th>
+    <th nzColumnKey="email" [nzSortFn]="true">Email</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let data of listData">
+    <td>{{ data.name.first }} {{ data.name.last }}</td>
+    <td>{{ data.gender }}</td>
+    <td>{{ data.email }}</td>
+  </tr>
+  </tbody>
+</nz-table>
+
+<nz-dropdown-menu #menu="nzDropdownMenu">
+  <div class="ant-table-filter-dropdown">
+    <div class="search-box">
+      <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchValue" />
+      <button nz-button nzSize="small" nzType="primary" (click)="search()" class="search-button">Search</button>
+      <button nz-button nzSize="small" (click)="reset()">Reset</button>
+    </div>
+  </div>
+</nz-dropdown-menu>

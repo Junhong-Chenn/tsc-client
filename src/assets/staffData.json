@@ -1,0 +1,137 @@
+{
+  "staff": [
+    {"name": "Nancy, Warren",
+      "email": "nancy@gmail.com",
+      "role": "CaseWorker",
+      "organizationName": "First State Community Action Agency",
+      "contactNumber": "123-456-7890"
+    },
+    {"name": "Joe, Collins",
+      "email": "collins@gmail.com",
+      "role": "CaseWorker",
+      "organizationName": "First State Community Action Agency",
+      "contactNumber": "223-456-7890"
+    },
+    {"name": "Ryan, Fisher",
+      "email": "ryanfisher@gmail.com",
+      "contactNumber": "123-456-7890",
+      "role": "CaseWorker",
+      "organizationName": "La Red Health Center"
+    },
+    {"name": "Amy, Chou",
+      "email": "amychou@gmail.com",
+      "contactNumber": "223-456-7890",
+      "role": "CaseWorker",
+      "organizationName": "La Red Health Center"
+    },
+    {"name": "Mike, Davis",
+      "email": "mikedavis@gmail.com",
+      "contactNumber": "123-456-7890",
+      "role": "CaseWorker",
+      "organizationName": "Marigold Health"
+    },
+    {"name": "Kate, Myers",
+      "email": "katemyers@gmail.com",
+      "contactNumber": "223-456-7890",
+      "role": "CaseWorker",
+      "organizationName": "Marigold Health"
+    },
+    {"name": "Luke, Dawn",
+      "email": "lukedawn@gmail.com",
+      "contactNumber": "123-456-7890",
+      "role": "CaseWorker",
+      "organizationName": "NET MARRV"
+    },
+    {"name": "Charlotte, Fan",
+      "email": "charlotte@gmail.com",
+      "contactNumber": "223-456-7890",
+      "role": "CaseWorker",
+      "organizationName": "NET MARRV"
+    },
+    {"name": "Vincent, Sheen",
+      "email": "vincent@gmail.com",
+      "contactNumber": "123-456-7890",
+      "role": "CaseWorker",
+      "organizationName": "Brandywine Valley SPCA"
+    },
+    {"name": "Shawn, Duan",
+      "email": "shawnduan@gmail.com",
+      "contactNumber": "223-456-7890",
+      "role": "CaseWorker",
+      "organizationName": "Brandywine Valley SPCA"
+    },
+    {"name": "James, Wong",
+      "email": "jameswong@gmail.com",
+      "contactNumber": "123-456-7890",
+      "role": "CaseWorker",
+      "organizationName": "Del-One Credit Union"
+    },
+    {"name": "Max, Song",
+      "email": "maxsong@gmail.com",
+      "contactNumber": "223-456-7890",
+      "role": "CaseWorker",
+      "organizationName": "Del-One Credit Union"
+    },
+    {"name": "Gia, Chen",
+      "email": "giachen@gmail.com",
+      "contactNumber": "123-456-7890",
+      "role": "CaseWorker",
+      "organizationName": "DSAMH and the PROMISE program"
+    },
+    {"name": "Junhong, Chen",
+      "email": "junhong@gmail.com",
+      "contactNumber": "223-456-7890",
+      "role": "CaseWorker",
+      "organizationName": "DSAMH and the PROMISE program"
+    },
+    {"name": "Phoebe, Wei",
+      "email": "phoebewei@gmail.com",
+      "contactNumber": "123-456-7890",
+      "role": "CaseWorker",
+      "organizationName": "Brandywine Counseling and Community Service"
+    },
+    {"name": "Lucas, Chen",
+      "email": "lucaschen@gmail.com",
+      "contactNumber": "223-456-7890",
+      "role": "CaseWorker",
+      "organizationName": "Brandywine Counseling and Community Service"
+    },
+    {"name": "Aki, Zhang",
+      "email": "akizhang@gmail.com",
+      "contactNumber": "123-456-7890",
+      "role": "CaseWorker",
+      "organizationName": "Georgetown Police Department"
+    },
+    {"name": "Lucene, Yang",
+      "email": "luceneyang@gmail.com",
+      "contactNumber": "223-456-7890",
+      "role": "CaseWorker",
+      "organizationName": "Georgetown Police Department"
+    },
+    {"name": "Teenie, Huang",
+      "email": "teeniehuang@gmail.com",
+      "contactNumber": "123-456-7890",
+      "role": "CaseWorker",
+      "organizationName": "Joyfully Connected Foundation"
+    },
+    {"name": "Harry, Wu",
+      "email": "harrywu@gmail.com",
+      "contactNumber": "223-456-7890",
+      "role": "CaseWorker",
+      "organizationName": "Joyfully Connected Foundation"
+    },
+    {"name": "Tabris, Wong",
+      "email": "tabriswong@gmail.com",
+      "contactNumber": "123-456-7890",
+      "role": "CaseWorker",
+      "organizationName": "CAMP Rehoboth"
+    },
+    {"name": "Mark, Martens",
+      "email": "markmartens@gmail.com",
+      "contactNumber": "223-456-7890",
+      "role": "CaseWorker",
+      "organizationName": "CAMP Rehoboth"
+    }
+
+  ]
+}

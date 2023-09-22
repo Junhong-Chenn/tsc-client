@@ -1,0 +1,66 @@
+<div class="caseDetail">
+    <div *ngIf="!showDetail" class="caseList">
+        <div class="btns">
+            <nz-radio-group [(ngModel)]="radioValue" nzButtonStyle="solid" (ngModelChange)="onCaseTypeChange($event)">
+            <label nz-radio-button [nzValue]="item.key" *ngFor="let item of caseType">{{ item.value }}</label>
+            </nz-radio-group>
+            <button nz-button nzType="primary" (click)="openDetail()" class="add">+ Add New</button>
+        </div>
+        <nz-table
+          class="table"
+          [nzData]="listOfBeneficiary"
+          [nzScroll]="{ x: '1500px', y: 'calc(100vh - 300px)' }"
+          nzTableLayout="fixed"
+        >
+          <thead>
+            <tr>
+                <th nzLeft>Name</th>
+                <th>Gender</th>
+                <th>DateOfBirth</th>
+                <th nzEllipsis>ContactNumber</th>
+                <th>Email</th>
+                <th>DevelopGoal</th>
+                <th>Service Plan</th>
+                <th>Navigator</th>
+                <th>CabinNumber</th>
+                <th>MoveInDate</th>
+                <th nzEllipsis>ConditionSummary</th>
+                <th nzRight [nzWidth]="'75px'">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let data of listOfBeneficiary">
+              <td nzEllipsis nzLeft>{{ data.name}}</td>
+              <td nzEllipsis>{{ data.gender }}</td>
+              <td nzEllipsis>{{ data.dateOfBirth }}</td>
+              <td nzEllipsis>{{ data.contactNumber }}</td>
+              <td nzEllipsis>{{ data.email}}</td>
+              <td>
+                <span *ngFor="let item of data.developGoal">
+                  <nz-tag [nzColor]="'magenta'">{{ item }}</nz-tag>
+                </span>
+              </td>
+              <td>
+                <span *ngFor="let item of data.servicePlanList">
+                  <nz-tag [nzColor]="'green'" nz-tooltip=""
+                          [nzTooltipTitleContext]="{ $implicit: item }">
+                    <span>{{ item?.["serviceName"] }}</span>
+                  </nz-tag>
+                </span>
+              </td>
+              <td nzEllipsis>{{data.assignedNavigator}}</td>
+              <td nzEllipsis>{{data.cabinNumber}}</td>
+              <td nzEllipsis>{{data.moveInDate}}</td>
+              <td nzEllipsis [nzTooltipTitle]="data.conditionSummary" nz-tooltip="true" [nzTooltipPlacement]="['topLeft', 'leftTop']">{{data.conditionSummary}}</td>
+              <td nzRight>
+                <a (click)="edit(data)">edit</a>
+              </td>
+            </tr>
+            </tbody>
+        </nz-table>
+    </div>
+    <app-caseDetail *ngIf="showDetail" [serviceData]="serviceData" [caseDetail]="caseDetail" (closeDetail)="closeDetail()">
+    </app-caseDetail>
+</div>
+
+
