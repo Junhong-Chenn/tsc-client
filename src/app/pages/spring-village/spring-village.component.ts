@@ -1,5 +1,5 @@
 import { Component, ComponentFactoryResolver, OnInit, ViewChild, ViewContainerRef, ViewEncapsulation } from '@angular/core';
-import { SpringVillageType, SpringVillageTypes, TableData} from "./spring-village.types";
+import {DEF_FILE_NAME, JsonToSheet, SpringVillageType, SpringVillageTypes, TableData} from "./spring-village.types";
 import { SpringVillageService } from "../../services/spring-village.service";
 import { NzTableQueryParams } from 'ng-zorro-antd/table';
 import { BeneficiaryComponent } from "./beneficiary/beneficiary.component";
@@ -7,6 +7,9 @@ import { NavigatorsComponent } from './navigators/navigators.component';
 import { CabinsComponent } from "./cabins/cabins.component";
 import { ServiceComponent } from "./service/service.component";
 import { TestComponent } from "./test/test.component";
+import * as xlsx from 'xlsx';
+import type { WorkBook } from 'xlsx';
+const { utils, writeFile } = xlsx;
 
 export const SpringVillageComponents = {
   [SpringVillageTypes.Beneficiary]: BeneficiaryComponent,
@@ -36,6 +39,7 @@ export class SpringVillageComponent implements OnInit {
     { text: 'female', value: 'female' }
   ];
   cachedQueryParams: NzTableQueryParams | null = null;
+  currentInstance: any = null;
 
   searchValue = '';
   visible = false;
@@ -118,6 +122,7 @@ export class SpringVillageComponent implements OnInit {
     const instance = componentRef.instance as BeneficiaryComponent;
     console.log('instance', instance);
     instance.fieldType = this.fieldType;
+    this.currentInstance = instance;
     if (instance.cachedQueryParams) {
       instance.springVillageService.onQueryParamsChange(instance.cachedQueryParams, instance.cachedQueryParams);
     }
@@ -125,6 +130,44 @@ export class SpringVillageComponent implements OnInit {
 
   unloadComponent() {
     this.dynamicComponentContainer.clear();
+  }
+
+  exportExcelData(event: any) {
+    this.defaultHeader();
+  }
+
+  defaultHeader() {
+    const data = this.currentInstance.listData;
+    const tempTitle = this.currentInstance.fieldType;
+    console.log('data: ', data);
+    this.jsonToSheetXlsx({
+      data,
+      filename: `${tempTitle || 'default'}.xlsx`,
+    });
+  }
+
+  jsonToSheetXlsx<T = any>({
+     data,
+     header,
+     filename = DEF_FILE_NAME,
+     json2sheetOpts = {},
+     write2excelOpts = { bookType: 'xlsx' },
+  }: JsonToSheet<T>) {
+    const arrData = [...data];
+    if (header) {
+      arrData.unshift(header);
+      json2sheetOpts.skipHeader = true;
+    }
+
+    const worksheet = utils.json_to_sheet(arrData, json2sheetOpts);
+
+    const workbook: WorkBook = {
+      SheetNames: [filename],
+      Sheets: {
+        [filename]: worksheet,
+      },
+    };
+    writeFile(workbook, filename, write2excelOpts);
   }
 
 }

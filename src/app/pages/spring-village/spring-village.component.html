@@ -3,6 +3,7 @@
     <nz-radio-group [(ngModel)]="fieldType" nzButtonStyle="solid" (ngModelChange)="onSpringVillageTypeChange($event)">
       <label nz-radio-button [nzValue]="item" *ngFor="let item of springVillageTypes">{{ item }}</label>
     </nz-radio-group>
+    <button nz-button nzType="default" (click)="exportExcelData($event)">Export</button>
   </section>
 
   <ng-template #dynamicComponentContainer></ng-template>
