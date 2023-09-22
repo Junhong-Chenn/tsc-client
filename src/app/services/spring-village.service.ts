@@ -115,11 +115,11 @@ export class SpringVillageService {
       });
     });
     console.log('fieldType', fieldType);
-    if (fieldType === SpringVillageTypes.Test) {
-      return this.httpClient
-        .get<{ results: TableData[] }>(`${this.randomUserUrl}`, { params })
-        .pipe(catchError(() => of({ results: [] })));
-    }
+    // if (fieldType === SpringVillageTypes.Test) {
+    //   return this.httpClient
+    //     .get<{ results: TableData[] }>(`${this.randomUserUrl}`, { params })
+    //     .pipe(catchError(() => of({ results: [] })));
+    // }
     if (fieldType === SpringVillageTypes.Beneficiary) {
       return this.httpClient
         .post<any>(`${this.baseUrl}/beneficiary/searchBeneficiary`, { ...reqObj })

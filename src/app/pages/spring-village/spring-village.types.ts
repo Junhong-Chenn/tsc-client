@@ -6,7 +6,7 @@ export enum SpringVillageTypes {
   Staff = 'Staff',
   Cabins = 'Cabins',
   Services = 'Services',
-  Test = 'Test',
+  // Test = 'Test',
   // Statistics = 'Statistics',
 }
 

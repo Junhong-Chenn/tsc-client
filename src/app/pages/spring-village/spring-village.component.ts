@@ -13,7 +13,7 @@ export const SpringVillageComponents = {
   [SpringVillageTypes.Staff]: NavigatorsComponent,
   [SpringVillageTypes.Cabins]: CabinsComponent,
   [SpringVillageTypes.Services]: ServiceComponent,
-  [SpringVillageTypes.Test]: TestComponent,
+  // [SpringVillageTypes.Test]: TestComponent,
 }
 
 @Component({
